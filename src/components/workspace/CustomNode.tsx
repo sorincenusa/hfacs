@@ -48,7 +48,7 @@ export const CustomNode = memo(({ data, isConnectable }: NodeProps) => {
           <Input
             value={label}
             onChange={(e) => onChange({ label: e.target.value })}
-            className="h-8 text-sm bg-white/50"
+            className="h-8 text-sm bg-white/50 nodrag"
             placeholder="Node title"
           />
         </div>
@@ -56,7 +56,7 @@ export const CustomNode = memo(({ data, isConnectable }: NodeProps) => {
         <div className="flex flex-col gap-1">
           <Label className="text-xs text-slate-500 font-semibold">HFACS Category</Label>
           <Select value={category} onValueChange={handleCategoryChange}>
-            <SelectTrigger className="h-8 text-sm bg-white/50">
+            <SelectTrigger className="h-8 text-sm bg-white/50 nodrag">
               <SelectValue placeholder="Select classification" />
             </SelectTrigger>
             <SelectContent>
